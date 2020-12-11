@@ -1,7 +1,9 @@
-import React, {useMemo} from "react";
+import React from "react";
+
+import {useDeepMemo} from "@apollo/client/react/hooks/utils/useDeepMemo";
 
 export const ButtonWithMemo: React.FC = () => {
-    const text = useMemo(() => ("button text"), ["some key"]);
+    const text = useDeepMemo(() => ("button text"), ["some key"]);
 
     return (
         <button>
